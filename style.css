@@ -1,0 +1,117 @@
+:root {
+    --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
+    --h2-color: black;
+    --p-color: black;
+    --nav-link-color: #444
+}
+
+body.dark {
+    --body-bg-color: linear-gradient(to bottom, #08282e, #000000);
+    --h2-color: white;
+    --nav-link-color: #cacaca;
+    --p-color: white;
+}
+body.light {
+    --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
+    --h2-color: black;
+    --p-color: black;
+    --nav-link-color: #444
+}
+
+body {
+    /*background: linear-gradient(to bottom, #e0f7fa, #ffffff); !* светло сина до бела *!*/
+    background: var(--body-bg-color);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: border-color 0.3s;
+}
+
+h2 {
+    /*color: black;*/
+    color: var(--h2-color)
+}
+h4 {
+    /*color: black;*/
+    color: var(--h2-color)
+}
+ul li{
+    color: var(--h2-color)
+}
+
+.nav-link {
+    font-weight: bold;
+    text-decoration: none;
+    /*color: #444;*/
+    color: var(--nav-link-color);
+    font-size: 18px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+.nav-link.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+}
+.nav-link{
+    cursor: pointer;
+}
+.fa-sun{
+    color: var(--h2-color);
+}
+
+ul.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+p {
+    padding: 15px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    /*background-color: rgba(255, 255, 255, 0.6);*/
+    /*color: black;*/
+    color: var(--p-color)
+}
+
+.icon-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-wrapper .tooltip-text {
+    visibility: hidden;
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+.icon-wrapper:hover .tooltip-text {
+    visibility: visible;
+}
+
+.icon-wrapper i {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
