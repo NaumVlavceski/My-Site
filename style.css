@@ -2,14 +2,19 @@
     --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
     --h2-color: black;
     --p-color: black;
-    --nav-link-color: #444
+    --nav-link-color: #444;
+    --navbar-toggler-color: #444;
+    --active-color: black
 }
 
 body.dark {
     --body-bg-color: linear-gradient(to bottom, #08282e, #000000);
     --h2-color: white;
-    --nav-link-color: #cacaca;
+    --nav-link-color: #606163;
     --p-color: white;
+    --navbar-toggler-color: #cdcaca;
+    --active-color: white;
+    --fa-bars-color: #cdcaca;
 }
 body.light {
     --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
@@ -25,7 +30,31 @@ body {
     background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: border-color 0.3s;
+
 }
+
+.fa-bars{
+    color: var(--fa-bars-color);
+}
+
+
+.section{
+    transition:opacity 0.5s ease;
+    opacity: 0;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+
+}
+.section.active{
+    opacity: 1;
+    z-index: 1;
+    pointer-events: auto;
+}
+
 
 h2 {
     /*color: black;*/
@@ -39,6 +68,10 @@ ul li{
     color: var(--h2-color)
 }
 
+.navbar-toggler{
+    border-color: var(--navbar-toggler-color);
+}
+
 .nav-link {
     font-weight: bold;
     text-decoration: none;
@@ -48,6 +81,9 @@ ul li{
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, color 0.3s;
+}
+.navbar-nav .nav-link.active{
+    color: var(--active-color);
 }
 
 .nav-link:hover {
