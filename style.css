@@ -1,5 +1,6 @@
 :root {
-    --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
+    /*--body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);*/
+    --body-bg-color:linear-gradient(135deg, #b2ebf2 0%, #caeef3 50%, #ffffff 100%);
     --h2-color: black;
     --p-color: black;
     --nav-link-color: #444;
@@ -7,10 +8,20 @@
     --active-color: black
 }
 
+.logo {
+    content: url("Light_Naum.png");
+}
+
+body.dark .logo {
+    content: url("Dark_Naum.png");
+}
+
+
 body.dark {
-    --body-bg-color: linear-gradient(to bottom, #08282e, #000000);
+    /*--body-bg-color: linear-gradient(to bottom, #08282e, #000000);*/
+     --body-bg-color: linear-gradient(135deg, #08282e 0%, #004d40 50%, #000000 100%);
     --h2-color: white;
-    --nav-link-color: #606163;
+    --nav-link-color: #b1b1b3;
     --p-color: white;
     --navbar-toggler-color: #cdcaca;
     --active-color: white;
@@ -24,7 +35,6 @@ body.light {
 }
 
 body {
-    /*background: linear-gradient(to bottom, #e0f7fa, #ffffff); !* светло сина до бела *!*/
     background: var(--body-bg-color);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -112,8 +122,6 @@ p {
     padding: 15px;
     border-radius: 12px;
     backdrop-filter: blur(5px);
-    /*background-color: rgba(255, 255, 255, 0.6);*/
-    /*color: black;*/
     color: var(--p-color)
 }
 

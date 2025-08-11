@@ -2,16 +2,7 @@
 
 function change_theme(){
         document.body.classList.toggle("dark")
-        if(document.getElementsByClassName("logo").item(0).attributes.item(0).value==="Light_Naum.png"){
-                document.getElementsByClassName("logo").item(0).attributes.item(0).value="Dark_Naum.png"
-                console.log(document.getElementsByClassName("logo").item(1).attributes.item(0).value="Dark_Naum.png")
-                document.getElementsByClassName("logo").item(2).attributes.item(0).value="Dark_Naum.png"
-        }else{
-                 document.getElementsByClassName("logo").item(0).attributes.item(0).value="Light_Naum.png"
-                document.getElementsByClassName("logo").item(1).attributes.item(0).value="Light_Naum.png"
-                document.getElementsByClassName("logo").item(2).attributes.item(0).value="Light_Naum.png"
 
-        }
 
 }
 document.getElementById("about_me").hidden=true
