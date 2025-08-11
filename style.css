@@ -1,35 +1,27 @@
 :root {
-    --body-bg-color:linear-gradient(135deg, #b2ebf2 0%, #caeef3 50%, #ffffff 100%);
+    --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
     --h2-color: black;
     --p-color: black;
     --nav-link-color: #444;
     --navbar-toggler-color: #444;
-    --active-color: black;
-    --label-color: black;
+    --active-color: black
 }
-input{
-    background: darkblue;
-}
+
 body.dark {
-    --body-bg-color: linear-gradient(135deg, #08282e 0%, #004d40 50%, #000000 100%);
+    --body-bg-color: linear-gradient(to bottom, #08282e, #000000);
     --h2-color: white;
-    --nav-link-color: #b1b1b3;
+    --nav-link-color: #606163;
     --p-color: white;
     --navbar-toggler-color: #cdcaca;
     --active-color: white;
     --fa-bars-color: #cdcaca;
-    --label-color: white;
 }
-
-.logo {
-    content: url("../photos/Light_Naum.png");
+body.light {
+    --body-bg-color: linear-gradient(to bottom, #bbf1fa, #ffffff);
+    --h2-color: black;
+    --p-color: black;
+    --nav-link-color: #444
 }
-
-body.dark .logo {
-    content: url("../photos/Dark_Naum.png");
-}
-
-
 
 body {
     /*background: linear-gradient(to bottom, #e0f7fa, #ffffff); !* светло сина до бела *!*/
@@ -41,18 +33,13 @@ body {
 
 }
 
-label {
-    color: var(--label-color);
-    /*color: red;*/
-}
-
-.fa-bars {
+.fa-bars{
     color: var(--fa-bars-color);
 }
 
 
-.section {
-    transition: opacity 0.5s ease;
+.section{
+    transition:opacity 0.5s ease;
     opacity: 0;
     position: relative;
     width: 100%;
@@ -62,8 +49,7 @@ label {
     pointer-events: none;
 
 }
-
-.section.active {
+.section.active{
     opacity: 1;
     z-index: 1;
     pointer-events: auto;
@@ -74,31 +60,29 @@ h2 {
     /*color: black;*/
     color: var(--h2-color)
 }
-
 h4 {
     /*color: black;*/
     color: var(--h2-color)
 }
-
-ul li {
+ul li{
     color: var(--h2-color)
 }
 
-.navbar-toggler {
+.navbar-toggler{
     border-color: var(--navbar-toggler-color);
 }
 
 .nav-link {
     font-weight: bold;
     text-decoration: none;
+    /*color: #444;*/
     color: var(--nav-link-color);
     font-size: 18px;
     padding-bottom: 4px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s, color 0.3s;
 }
-
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.active{
     color: var(--active-color);
 }
 
@@ -110,12 +94,10 @@ ul li {
     color: #007bff;
     border-bottom: 3px solid #007bff;
 }
-
-.nav-link {
+.nav-link{
     cursor: pointer;
 }
-
-.fa-sun {
+.fa-sun{
     color: var(--h2-color);
 }
 
@@ -167,32 +149,5 @@ p {
     padding: 15px;
     border-radius: 50%;
     font-size: 20px;
-}
-
-.dark-light {
-    position: absolute;
-    left: -5%;
-}
-#contact_me{
-        width: 150%;
-}
-@media (max-width: 768px) {
-    .dark-light {
-        position: static;
-        top: 65px;
-        left: 85%;
-    }
-    #contact_me{
-        width: 150%;
-    }
-    .container-fluid{
-        padding-bottom: 20px;
-    }
-    .mobile{
-        padding-bottom: 40px;
-    }
-    .navbar{
-        padding-top: 20px;
-    }
 }
 
